@@ -1,28 +1,29 @@
-<div class="newUser">
 
-	<%= form_for @user do |f| %>
+<div>
 
-		<ul class="newUserForm">
 
-			<li><%= f.label :first_name %></li>
-			<li class="newListItemLast"><%= f.text_field :first_name %></li>
 
-			<li><%= f.label :last_name %></li>
-			<li class="newListItemLast"><%= f.text_field :last_name %></li>
+		<ul>
 
-			<li><%= f.label :email %></li>
-			<li class="newListItemLast"><%= f.text_field :email %></li>
+			<li>
+			<%= form_for @user do |f| %>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
 
-			<li><%= f.label :username %></li>
-			<li class="newListItemLast"><%= f.text_field :username %></li>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
 
-			<li><%= f.label :password %></li>
-			<li class="newListItemLast"><%= f.text_field :password %></li>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
 
-			<li><%= f.label :profile_pic %></li>
-			<li class="newListItemLast"><%= f.text_field :profile_pic %></li>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
 
-			<li><%= f.submit %></li>
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create my account" %>
+    <% end %></li>
 		
 		</ul>
 

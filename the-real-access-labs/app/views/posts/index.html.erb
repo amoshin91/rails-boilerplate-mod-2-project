@@ -1,15 +1,16 @@
-<%= @posts.each do |post| %>
+<div> 
+  
+<% @posts.each do |post| %>
 
-	<div class="homepagePost">
+
+	 <div class="homepagePost">
 
 		<h2 class="homepagePostTitle">
 			<%= post.title %>
 		</h2>
 
 		<div class="homepagePostContent">
-			<%= post.content %>	
+			<%= post.content %>
 		</div>
 
 	</div>
-
-<% end %>
