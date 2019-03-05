@@ -10,7 +10,10 @@
 	</ul>
 	<ul id="userSidebarUpdate">
 		<li>Update your info</li>
-		<li><%= link_to 'Update Info', edit_user_path(@user) %></li>
+		<li><%= button_to 'Update Info', edit_user_path, :method => 'get' %></li>
 	</ul>
 </aside>
 
+<content id="userContent">
+	<%=  %>
+</content>

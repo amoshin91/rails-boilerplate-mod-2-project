@@ -7,7 +7,7 @@ class UsersController < ActionController::Base
 	end
 
 	def show
-		
+
 	end
 
 	def new
