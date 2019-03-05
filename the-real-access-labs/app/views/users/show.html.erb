@@ -1,0 +1,16 @@
+<h2>
+	Hello <%= @user.username %>
+</h2>
+
+<aside id="userSidebar">
+	<ul id="userSidebarInfo">
+		<li><%= @user.profile_pic %></li>
+		<li>Name: <%= @user.first_name %> <%= @user.last_name %></li>
+		<li>Email: <%= @user.email %></li>
+	</ul>
+	<ul id="userSidebarUpdate">
+		<li>Update your info</li>
+		<li><%= link_to 'Update Info', edit_user_path(@user) %></li>
+	</ul>
+</aside>
+

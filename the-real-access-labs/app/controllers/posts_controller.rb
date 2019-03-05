@@ -34,7 +34,7 @@ class PostsController < ActionController::Base
 
 	private
 
-	def user_params
+	def post_params
 		params.require(:post).permit(:username, :first_name, :last_name, :email, :password, :profile_pic)
 	end
 

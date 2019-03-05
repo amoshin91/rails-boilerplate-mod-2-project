@@ -1,1 +1,14 @@
-new post
+<%= form_for @post do |f| %>
+
+	<ul class="newPostForm">
+
+		<li><%= f.label :title %></li>
+		<li class="newListItemLast"><%= f.text_field :title %></li>
+
+		<li><%= f.label :content %></li>
+		<li class="newListItemLast"><%= f.text_field :content %></li>
+
+		<li><%= f.submit %></li>
+	</ul>
+
+<% end %>
