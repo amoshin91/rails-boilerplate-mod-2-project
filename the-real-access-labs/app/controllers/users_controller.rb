@@ -1,6 +1,6 @@
 class UsersController < ActionController::Base
 
-	before_action :get_users, only: [:index, :edit, :update, :destroy, :show]
+	before_action :get_users, only: [:edit, :update, :destroy, :show]
 
 	def index
 		
