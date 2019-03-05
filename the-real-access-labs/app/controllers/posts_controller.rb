@@ -16,6 +16,7 @@ class PostsController < ActionController::Base
 
 	def create
 		@post = Post.create(post_params)
+		# byebug
 		redirect_to @post
 	end
 
@@ -29,13 +30,14 @@ class PostsController < ActionController::Base
 	end
 
 	def destroy
+		@post.destroy(post_params)
 		redirect_to posts_path
 	end
 
 	private
 
-	def user_params
-		params.require(:post).permit(:username, :first_name, :last_name, :email, :password, :profile_pic)
+	def post_params
+		params.require(:post).permit(:title, :content)
 	end
 
 	def get_posts

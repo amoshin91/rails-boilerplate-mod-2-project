@@ -1,6 +1,12 @@
 
+<div>
 
-<%= form_for @user do |f| %>
+
+
+		<ul>
+
+			<li>
+			<%= form_for @user do |f| %>
       <%= f.label :first_name %>
       <%= f.text_field :first_name %>
 
@@ -17,4 +23,10 @@
       <%= f.password_field :password_confirmation %>
 
       <%= f.submit "Create my account" %>
-    <% end %>
+    <% end %></li>
+		
+		</ul>
+
+	<% end %>	
+
+</div>
