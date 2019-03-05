@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(version: 2019_03_04_222808) do
     t.datetime "updated_at", null: false
     t.index ["followed_id_id"], name: "index_follows_on_followed_id_id"
     t.index ["follower_id_id"], name: "index_follows_on_follower_id_id"
+    t.index [nil, nil], name: "index_follows_on_follower_id_and_followed_id", unique: true
+    t.index [nil], name: "index_follows_on_followed_id"
+    t.index [nil], name: "index_follows_on_follower_id"
   end
 
   create_table "posts", force: :cascade do |t|
