@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :posts
   resources :follows
   resources :reactions
+  resources :comments
 end
