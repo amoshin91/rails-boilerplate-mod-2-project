@@ -3,11 +3,11 @@ class UsersController < ActionController::Base
 	before_action :get_users, only: [:edit, :update, :destroy, :show]
 
 	def index
-		
+
 	end
 
 	def show
-		
+
 	end
 
 	def new
@@ -16,11 +16,16 @@ class UsersController < ActionController::Base
 
 	def create
 		@user = User.create(user_params)
-		redirect_to @user
+		if @user && @user.authenticate(user_params)
+			redirect_to @user
+		else
+			flash[:errors] = @user.errors.full_messages.to_sentence
+			render :new
+		end
 	end
 
 	def edit
-		
+
 	end
 
 	def update
