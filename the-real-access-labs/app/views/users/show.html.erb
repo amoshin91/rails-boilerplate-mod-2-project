@@ -1,15 +1,15 @@
 <h2>
-	Hello <%=@user.username %>
+	Hello <%=@user.username%>
 </h2>
 
 <aside id="userSidebar">
-	<ul id="userSidebarInfo">
-		<li><%= @user.profile_pic %></li>
+	    <ul id="userSidebarInfo">
+		<%= @user.profile_pic %>
 		<li>Name: <%= @user.first_name %> <%= @user.last_name %></li>
 		<li>Email: <%= @user.email %></li>
 	</ul>
 	<ul id="userSidebarUpdate">
-		<%= button_to 'Update Info', edit_user_path, :method => 'post' %>
+		<%= button_to 'Update Info', edit_user_path %>
 	</ul>
 </aside>
 

@@ -16,7 +16,7 @@ class UsersController < ActionController::Base
 	def create
 		@user = User.create(user_params)
 		if @user && @user.authenticate(user_params)
-			redirect_to @user
+			redirect_to @user.id 
 		else
 			flash[:errors] = @user.errors.full_messages
 			render :new

@@ -2,7 +2,6 @@
 
 
 <div>
-
 		<ul>
 
 	 <%= form_for @user do |f| %>
@@ -24,5 +23,10 @@
       <%= f.submit "Create my account" %>
     <% end %>
 
+    <% if flash[:errors]%>
+    <% flash[:errors].each do |error|%>
+    <h1><%= error %></h1>
+    <%end%>
+    <%end%>
 
 </div>
