@@ -1,21 +1,16 @@
 class ApplicationController < ActionController::Base
 
-    include SessionsHelper
 
-    before_action :setup_user
+before_action :setup_user
 
-    def setup_user
-        @logged_in = !!session[:user_id]
-        if @logged_in
-          @logged_in_user = User.find(session[:user_id])
-        end
-        @errors = flash[:errors]
-
-        @message = flash[:message]
+def setup_user
+    @logged_in = !!session[:user_id]
+    if @logged_in
+        @logged_in_user = User.find(session[:user_id])
     end
-
-
-
+    @errors = flash[:errors]
+    @message = flash[:message]
+end
 
 
 end

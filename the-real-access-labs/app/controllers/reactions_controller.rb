@@ -3,11 +3,10 @@ class ReactionsController < ActionController::Base
 	before_action :get_reaction, only: [:show, :edit, :update, :destroy]
 
 	def index
-		
 	end
 
 	def show
-		
+
 	end
 
 	def new
@@ -20,7 +19,7 @@ class ReactionsController < ActionController::Base
 	end
 
 	def edit
-		
+
 	end
 
 	def update
