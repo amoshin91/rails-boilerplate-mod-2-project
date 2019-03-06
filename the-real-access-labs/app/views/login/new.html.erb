@@ -2,7 +2,7 @@
 
 <h1>Log in</h1>
 
-<%= form_tag sessions_new_path do %>
+<%= form_tag login_index_path do %>
   <ul>
     <li>
       <%= label_tag :username %>
@@ -15,5 +15,12 @@
   </ul>
   <%= submit_tag "Log in" %>
 <% end %>
+
+<% if flash[:errors]%>
+<% flash[:errors].each do |error|%>
+<h1><%= error %></h1>
+<%end%>
+<%end%>
+
     <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
   </div>
