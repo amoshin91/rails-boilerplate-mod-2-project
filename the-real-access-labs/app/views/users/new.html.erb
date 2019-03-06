@@ -1,32 +1,28 @@
 
+
+
 <div>
-
-
 
 		<ul>
 
-			<li>
-			<%= form_for @user do |f| %>
-      <%= f.label :first_name %>
+	 <%= form_for @user do |f| %>
+    <li>  <%= f.label :first_name %></li>
       <%= f.text_field :first_name %>
 
-      <%= f.label :last_name %>
+    <li>   <%= f.label :last_name %> </li>
       <%= f.text_field :last_name %>
 
-      <%= f.label :email %>
+    <li>   <%= f.label :username %> </li>
+      <%= f.text_field :username %>
+
+    <li>   <%= f.label :email %> </li>
       <%= f.email_field :email %>
 
-      <%= f.label :password %>
+    <li>   <%= f.label :password %> </li>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
-
       <%= f.submit "Create my account" %>
-    <% end %></li>
-		
-		</ul>
+    <% end %>
 
-	<% end %>	
 
 </div>

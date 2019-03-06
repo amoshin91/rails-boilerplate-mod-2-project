@@ -3,11 +3,10 @@ class UsersController < ActionController::Base
 	before_action :get_users, only: [:edit, :update, :destroy, :show]
 
 	def index
-
+		@user = User.all
 	end
 
 	def show
-
 	end
 
 	def new
@@ -19,7 +18,7 @@ class UsersController < ActionController::Base
 		if @user && @user.authenticate(user_params)
 			redirect_to @user
 		else
-			flash[:errors] = @user.errors.full_messages.to_sentence
+			flash[:errors] = @user.errors.full_messages
 			render :new
 		end
 	end
@@ -40,7 +39,7 @@ class UsersController < ActionController::Base
 	private
 
 	def user_params
-		params.require(:user).permit(:username, :first_name, :last_name, :email, :password, :profile_pic)
+		params.require(:user).permit(:username, :first_name, :last_name, :email, :password)
 	end
 
 	def get_users

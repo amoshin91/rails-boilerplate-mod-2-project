@@ -1,16 +1,36 @@
-<div> 
-  
-<% @posts.each do |post| %>
+
+<div>
+	<nav class="auth-nav">
+	  <ul>
+		<% unless @logged_in %>
+		<li>
+		  <%= link_to "Sign up", new_user_path %>
+		</li>
+		<li>
+		  <%= link_to "Log in", sessions_new_path %>
+		</li>
+		<% else  %>
+		  <li>
+			Logged in as <%= @logged_in.first_name %>
+		  </li>
+		  <li>
+			<%= form_tag "/login/#{ @logged_in.id }", method: :delete do %>
+			  <%= submit_tag "Log out" %>
+			<% end %>
+		  </li>
+		<% end %>
+	  </ul>
+	</nav>
+
+</div>
 
 
-	 <div class="homepagePost">
 
-		<h2 class="homepagePostTitle">
+<div>
+
+	<h1>Posts</h1>
+<%@posts.each do |post|%>
 			<%= post.title %>
-		</h2>
-
-		<div class="homepagePostContent">
 			<%= post.content %>
-		</div>
-
-	</div>
+			<%end%>
+</div>

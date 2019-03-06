@@ -1,5 +1,5 @@
 <h2>
-	Hello <%= @user.username %>
+	Hello <%=@user.username %>
 </h2>
 
 <aside id="userSidebar">
@@ -9,11 +9,9 @@
 		<li>Email: <%= @user.email %></li>
 	</ul>
 	<ul id="userSidebarUpdate">
-		<li>Update your info</li>
-		<li><%= button_to 'Update Info', edit_user_path, :method => 'get' %></li>
+		<%= button_to 'Update Info', edit_user_path, :method => 'post' %>
 	</ul>
 </aside>
 
 <content id="userContent">
-	<%=  %>
 </content>
