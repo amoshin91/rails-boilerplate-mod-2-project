@@ -14,12 +14,12 @@
         <nav class="auth-nav">
           <ul>
             <% unless @logged_in %>
-            <li>
-              <%= link_to "Sign up", new_user_path %>
-            </li>
-            <li>
-              <%= link_to "Log in", new_login_path %>
-            </li>
+              <li>
+                <%= link_to "Sign up", new_user_path %>
+              </li>
+              <li>
+                <%= link_to "Log in", new_login_path %>
+              </li>
             <% else  %>
 
                 Logged in as <%= @logged_in_user.username %>
@@ -31,9 +31,8 @@
               </li>
             <% end %>
           </li>
-        <% end %>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
 
     <% if @errors && @errors.any? %>
       <ul class="errors">
