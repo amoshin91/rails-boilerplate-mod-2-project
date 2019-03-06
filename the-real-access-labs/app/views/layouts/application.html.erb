@@ -9,31 +9,31 @@
    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-      <header>
-        <nav class="auth-nav">
-          <ul>
-            <% unless @logged_in %>
-            <li>
-              <%= link_to "Sign up", new_user_path %>
-            </li>
-            <li>
-              <%= link_to "Log in", sessions_new_path %>
-            </li>
-            <% else  %>
-              <li>
-                Logged in as <%= @logged_in.first_name %>
-              </li>
-              <li>
-                <%= form_tag "/login/#{ @logged_in.id }", method: :delete do %>
-                  <%= submit_tag "Log out" %>
-                <% end %>
-              </li>
+  <header>
+    <nav class="auth-nav">
+      <ul>
+        <% unless @logged_in %>
+          <li>
+            <%= link_to "Sign up", new_user_path %>
+          </li>
+          <li>
+            <%= link_to "Log in", sessions_new_path %>
+          </li>
+        <% else %>
+          <li>
+            Logged in as <%= @logged_in.first_name %>
+          </li>
+          <li>
+            <%= form_tag "/login/#{ @logged_in.id }", method: :delete do %>
+              <%= submit_tag "Log out" %>
             <% end %>
-          </ul>
-        </nav>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
 
-        <% if @errors && @errors.any? %>
-        <ul class="errors">
+    <% if @errors && @errors.any? %>
+      <ul class="errors">
         <% @errors.each do |error| %>
         <li>
           <%= error %>
@@ -41,7 +41,15 @@
         <% end %>
       </ul>
     <% end %>
-</header>
+  </header>
+
+<div class="crossfade">
+  <figure></figure>
+  <figure></figure>
+  <figure></figure>
+  <figure></figure>
+</div>
+
 
 </body>
     <%= yield %>
