@@ -15,11 +15,12 @@
  */
 body {
 	margin: 0;
+	font-family: 'Montserrat', sans-serif;
 	/*background: #ccc;*/
 }
 
 header {
-	height: 43px;
+	height: 38px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,7 +50,7 @@ a:hover {
 }
 
 .auth-nav {
-	font-size: 1.1em;
+	font-size: .85em;
 	width: 180px;
 	float: right;
 	margin: 10px 20px 0 0;
@@ -63,24 +64,49 @@ a:hover {
 	margin: auto;
 }
 
+.homepage-content {
+	height: 450px;
+}
+
 .homepage-login {
-	width: 30%;
+	font-weight: 600;
+	font-size: 1em;
+	width: 180px;
+	margin: auto
+}
+
+.homepage-login ul {
+	text-align: center;	
+}
+
+.homepage-login ul li {
+	margin: auto;
+}
+
+.homepage-window {
+	width: 500px;
 	margin: auto;
 	/*margin-top: 100px;*/
 	/*padding: 20% 0;*/
 	background: #fff;
-	height: 50%;
+	height: 550px;
 	border-radius: 25px;
 	padding: 20px;
 	text-align: center;
 }
 
+.homepage-title {
+	font-size: 3em;
+	padding: 10px 0 15px;
+	border-bottom: 2px solid #ccc;
+}
+
 #homepage-image {
-	background-image: url('/assets/002.jpg');
+	background-image: url('/assets/003.jpg');
 	background-repeat: no-repeat;
 	background-size: 100vw;
-	height: 96vh;
-	padding-top: 5%;
+	height: 90vh;
+	padding-top: 6%;
 }
 
 .clear {
