@@ -16,7 +16,7 @@ class UsersController < ActionController::Base
 	def create
 		@user = User.create(user_params)
 		if @user && @user.authenticate(user_params)
-			return user_path
+			redirect_to user_path
 		else
 			flash[:errors] = @user.errors.full_messages
 			render :new
@@ -24,7 +24,6 @@ class UsersController < ActionController::Base
 	end
 
 	def edit
-		@user.update(user_params)
 
 	end
 
@@ -40,7 +39,7 @@ class UsersController < ActionController::Base
 	private
 
 	def user_params
-		params.require(:user).permit(:username, :first_name, :last_name, :email, :password)
+		params.require(:user).permit(:username, :first_name, :last_name, :email, :password, :user_id)
 	end
 
 	def get_users

@@ -11,9 +11,5 @@ Rails.application.routes.draw do
   resources :login, only: [:new, :create, :update, :destroy]
 
 
-  get  'static_pages/home'
-  get  'static_pages/help'
-
-
 
 end

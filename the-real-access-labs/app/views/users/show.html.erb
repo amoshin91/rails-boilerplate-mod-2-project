@@ -8,9 +8,9 @@
 		<li>Name: <%= @user.first_name %> <%= @user.last_name %></li>
 		<li>Email: <%= @user.email %></li>
 	</ul>
-	<ul id="userSidebarUpdate">
-		<%= button_to 'Update Info', edit_user_path %>
-	</ul>
+
+		<%= link_to 'Update Info', "/users/#{@user.id}/edit" %>
+
 </aside>
 
 <content id="userContent">
